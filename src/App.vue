@@ -1,9 +1,12 @@
 <script>
 import Header from './components/header.vue'
+import Main from './components/main.vue'
+
 
 export default {
     components: {
-        Header
+        Header,
+        Main
     }
 }
 
@@ -11,6 +14,7 @@ export default {
 
 <template>
     <Header />
+    <Main />
 </template>
 
 <style lang="scss">
