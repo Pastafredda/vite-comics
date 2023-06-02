@@ -19,13 +19,13 @@ export default {
                 {
                     text: "SUBSCRIPTION",
                     url: "#",
-                    image: "../assets/img/buy-comics-shop-locator.png"
+                    image: "../assets/img/buy-comics-subscriptions.png"
                 },
 
                 {
                     text: "COMIC SHOP LOCATOR",
                     url: "#",
-                    image: "../assets/img/buy-comics-subscriptions.png"
+                    image: "../assets/img/buy-comics-shop-locator.png"
                 },
 
                 {
@@ -55,16 +55,20 @@ export default {
     <div class="main-menu">
         <div class="container">
             <div class="card-menu">
-                <div class="logo-card" v-for="link in links">
-                    <img :src="getImageUrl(link.image)" alt="">
-                    <span>{{ link.text }}</span>
-                </div>
+                <a href="#" class="card" v-for="link in links">
+                    <div class="logo-card">
+                        <img :src="getImageUrl(link.image)" alt="">
+                    </div>
+                    <span href="#">{{ link.text }}</span>
+                </a>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
+@use '../styles/mixins.scss' as *;
+
 .jumbo {
     height: 140px;
     width: 100%;
@@ -73,12 +77,32 @@ export default {
 }
 
 .main-menu {
+
     background-color: #0080f8;
-    padding: 20px;
-}
+    height: 180px;
+    display: flex;
+    align-items: center;
 
-.logo-card {
-    width: 40px;
+    .card-menu {
+        @include display-flex;
 
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-card {
+        height: 54px;
+        width: 54px;
+        padding-right: 10px;
+
+    }
+
+    span {
+        font-size: 14px;
+        color: white;
+    }
 }
 </style>

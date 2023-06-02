@@ -113,9 +113,7 @@ export default {
         }
 
         a {
-            text-decoration: none;
             font-weight: 500;
-
         }
     }
 }

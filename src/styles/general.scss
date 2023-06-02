@@ -11,7 +11,9 @@
 }
 
 img {
+    height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 .active {
@@ -21,4 +23,8 @@ img {
 
 .black {
     color: #313232;
+}
+
+a {
+    text-decoration: none;
 }
