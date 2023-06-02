@@ -70,18 +70,18 @@ export default {
 @use '../styles/mixins.scss' as *;
 
 .jumbo {
-    height: 140px;
+    height: 120px;
     width: 100%;
     background-color: #232323;
     color: white;
 }
 
 .main-menu {
-
     background-color: #0080f8;
-    height: 180px;
+    height: 140px;
     display: flex;
     align-items: center;
+    padding: 20px;
 
     .card-menu {
         @include display-flex;
