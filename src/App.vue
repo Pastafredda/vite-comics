@@ -1,14 +1,16 @@
 <script>
 import Header from './components/header.vue'
-import Main from './components/main.vue'
-import Footer from './components/footer.vue'
+import HomeMenu from './components/HomeMenu.vue'
+import Footer from './components/Footer.vue'
+import Jumbo from './components/Jumbo.vue'
 
 
 
 export default {
     components: {
         Header,
-        Main,
+        Jumbo,
+        HomeMenu,
         Footer
     }
 }
@@ -17,7 +19,8 @@ export default {
 
 <template>
     <Header />
-    <Main />
+    <Jumbo />
+    <HomeMenu />
     <Footer />
 </template>
 

@@ -123,18 +123,18 @@ export default {
 
 <template>
     <footer>
+
         <div class="container">
             <div class="container-footer">
                 <div class="menu-footer">
                     <div class="card" v-for="(link, index) in links">
                         <h5>{{ link.title }}</h5>
                         <ul>
-                            <li v-for="(text, index) in link.texts">
+                            <li v-for="(text, index) in link.texts" :key="index">
                                 <a href="#">{{ text.text }}</a>
                             </li>
                         </ul>
                     </div>
-
                 </div>
                 <div class="logo-footer"></div>
             </div>
@@ -158,6 +158,7 @@ export default {
                 </div>
             </div>
         </div>
+
     </footer>
 </template>
 
@@ -168,7 +169,6 @@ footer {
     background-image: url(../assets/img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
     position: relative;
 
     .container-footer {
@@ -177,14 +177,12 @@ footer {
 
         .menu-footer {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
-            padding: 30px;
-
+            padding: 20px;
 
             h5 {
                 color: white;
-                margin-bottom: 10px;
-
             }
 
             a {
@@ -195,13 +193,15 @@ footer {
 
         .logo-footer {
             background-image: url(../assets/img/dc-logo-bg.png);
-            height: 300px;
-            width: 460px;
             background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: 0 -75px;
+            width: 400px;
+            background-size: cover;
+            background-position: 0 -72px;
         }
+
+
     }
+
 
 }
 

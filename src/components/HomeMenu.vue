@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "Main",
+    name: "HomeMenu",
     data() {
         return {
             links: [
@@ -46,16 +46,10 @@ export default {
 </script>
 
 <template>
-    <div class="jumbo">
-        <div class="container">
-            Content goes here
-        </div>
-    </div>
-
     <div class="main-menu">
         <div class="container">
             <div class="card-menu">
-                <a href="#" class="card" v-for="link in links">
+                <a href="#" class="card" v-for="(link, index) in links" :key="index">
                     <div class="logo-card">
                         <img :src="getImageUrl(link.image)" alt="">
                     </div>
@@ -68,13 +62,6 @@ export default {
 
 <style scoped lang="scss">
 @use '../styles/mixins.scss' as *;
-
-.jumbo {
-    height: 120px;
-    width: 100%;
-    background-color: #232323;
-    color: white;
-}
 
 .main-menu {
     background-color: #0080f8;
