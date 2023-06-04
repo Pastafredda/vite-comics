@@ -4,6 +4,7 @@ export default {
     props: {
         details: Object
     }
+    // props objecs
 
 }
 </script>
